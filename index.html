@@ -1,209 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Prisme Lab — Studio de post-production</title>
-  <meta name="description" content="Prisme Lab, laboratoire de post-production : montage, étalonnage, VFX et mixage pour le cinéma, la série et la publicité.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" type="image/x-icon" href="Design/images/pokeball.ico">
+    <link rel="stylesheet" href="Design/style.css">
+    <script src="Animation/java.js" defer></script>
 </head>
+
 <body>
-  <div class="liquid-bg" aria-hidden="true">
-    <div class="blob b1" data-depth="40"></div>
-    <div class="blob b2" data-depth="-60"></div>
-    <div class="blob b3" data-depth="30"></div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav class="nav glass" id="nav">
-    <a href="index.html" class="logo">
-      <span class="logo-mark"></span>
-      <span>PRISME<small> LAB</small></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#top" class="active">Accueil</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#pipeline">Pipeline</a></li>
-      <li><a href="#infra">Infrastructure</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
-    </ul>
-    <a href="dashboard.html" class="btn btn-primary">Espace studio
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
-  </nav>
+    <div class="Pokedex-header">
+        <input class="pokecherche" type="text" id="searchInput" placeholder="Rechercher un Pokémon...">
+        <img class="pokelogo" src="Design/images/pokelogo.webp" alt="logo pokemon">
+    </div> 
+    
+    <div class="Pokedex">
 
-  <!-- HERO -->
-  <header class="container hero" id="top">
-    <div>
-      <span class="eyebrow glass"><i class="dot"></i> Ferme de rendu en ligne · 64 GPU</span>
-      <h1>
-        <span class="line"><span style="--d:.1s">La post-prod,</span></span>
-        <span class="line"><span style="--d:.25s" class="gradient-text">à l'état liquide.</span></span>
-      </h1>
-      <p class="lead">Montage, étalonnage HDR, VFX et mixage Dolby Atmos réunis dans un seul laboratoire. Un pipeline fluide, du rush à la livraison DCP.</p>
-      <div class="hero-actions">
-        <a href="dashboard.html" class="btn btn-primary">Ouvrir le dashboard
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#services" class="btn btn-ghost">Nos services</a>
-      </div>
+        <!-- Template pour cartes -->
 
-      <div class="stats">
-        <div class="stat glass" data-reveal style="--d:.5s"><b data-count="1240">0</b><span>projets livrés</span></div>
-        <div class="stat glass" data-reveal style="--d:.6s"><b data-count="8" data-suffix="K">0</b><span>HDR Dolby Vision</span></div>
-        <div class="stat glass" data-reveal style="--d:.7s"><b data-count="2.4" data-decimals="1" data-suffix=" Po">0</b><span>stockage SAN</span></div>
-        <div class="stat glass" data-reveal style="--d:.8s"><b data-count="98" data-suffix="%">0</b><span>délais tenus</span></div>
-      </div>
-    </div>
-
-    <!-- Fake grading viewer -->
-    <div class="viewer glass" data-tilt data-reveal style="--d:.3s">
-      <div class="viewer-top">
-        <span class="rec"><i></i> LUMEN_S01E04 · sh0420</span>
-        <span id="heroTc">01:00:00:00</span>
-      </div>
-      <div class="frame">
-        <div class="frame-img"></div>
-        <div class="split"></div>
-        <div class="letterbox"></div>
-      </div>
-      <div class="scopes">
-        <div class="scope">
-          <label>RGB PARADE</label>
-          <canvas id="parade"></canvas>
+       <div class="PokeTemplate">
+            <div class="PokeTitre">
+                <h1>Groudon</h1><h1>120PV</h1>
+            </div>
+            <div class="PokePhoto">
+                <img class="TempPokePhoto" src="Design/images/gourmon.jpg" alt="groudon">
+                <ol class="PokeDesc">
+                    <li>Séisme Ardent</li>
+                    <br>
+                    <li>Lave Rugissante</li>
+                </ol>
+                <p class="blabla">Il fait trembler la terre à chaque pas et réveille les volcans endormis. Personne n'ose s'approcher de sa colère.</p>   
+            </div>
         </div>
-        <div class="scope">
-          <label>LIFT · GAMMA · GAIN</label>
-          <div class="wheels">
-            <div class="wheel"><i></i></div>
-            <div class="wheel"><i></i></div>
-            <div class="wheel"><i></i></div>
-          </div>
+
+
+       <div class="PokeTemplate eau">
+            <div class="PokeTitre">
+                <h1>Amphinobi</h1><h1>130PV</h1>
+            </div>
+            <div class="PokePhoto">
+                <img class="TempPokePhoto" src="Design/images/amphi.jpg" alt="groudon">
+                <ol class="PokeDesc">
+                    <li>Shuriken d'Écume</li>
+                    <br>
+                    <li>Lame des Marées</li>
+                </ol>
+                <p class="blabla">Silencieux comme l'ombre d'une vague, il frappe avant même qu'on ait entendu l'eau bouger.</p>   
+            </div>
         </div>
-      </div>
-      <div class="timeline" id="timeline">
-        <div class="track v"><div class="clip" style="flex:3"></div><div class="clip" style="flex:1.4"></div><div class="clip" style="flex:2.2"></div><div class="clip" style="flex:1"></div><div class="clip" style="flex:2.6"></div></div>
-        <div class="track v" style="opacity:.6"><div style="flex:2"></div><div class="clip" style="flex:1.2"></div><div style="flex:2.4"></div><div class="clip" style="flex:1.6"></div><div style="flex:1"></div></div>
-        <div class="track a"><div class="clip" style="flex:4"></div><div class="clip" style="flex:2.5"></div><div class="clip" style="flex:3.5"></div></div>
-        <div class="playhead" id="playhead"></div>
-      </div>
-    </div>
-  </header>
 
-  <!-- MARQUEE -->
-  <div class="marquee" aria-label="Outils">
-    <div class="marquee-track">
-      <span>DaVinci Resolve</span><span>Avid Media Composer</span><span>Foundry Nuke</span><span>SideFX Houdini</span><span>Pro Tools</span><span>Dolby Atmos</span><span>Baselight</span><span>ACES 1.3</span><span>Unreal Engine</span>
-      <span>DaVinci Resolve</span><span>Avid Media Composer</span><span>Foundry Nuke</span><span>SideFX Houdini</span><span>Pro Tools</span><span>Dolby Atmos</span><span>Baselight</span><span>ACES 1.3</span><span>Unreal Engine</span>
-    </div>
-  </div>
 
-  <!-- SERVICES -->
-  <section class="section container" id="services">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow glass">Services</span>
-      <h2>Quatre métiers, <span class="gradient-text">un seul flux.</span></h2>
-      <p>Chaque département partage le même stockage, les mêmes LUT et le même suivi de version. Aucune perte entre les étapes.</p>
-    </div>
-
-    <div class="services">
-      <article class="service glass" data-tilt data-reveal style="--d:0s">
-        <div class="icon" style="--c:var(--cyan)"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 5v4M16 5v4M10 13l4 2-4 2z"/></svg></div>
-        <h3>Montage</h3>
-        <p>Salles Avid & Premiere en réseau, proxys générés à l'ingest, conformation automatique EDL / AAF / XML.</p>
-        <ul><li>Avid Nexis</li><li>Offline / Online</li><li>Conform</li></ul>
-      </article>
-      <article class="service glass" data-tilt data-reveal style="--d:.1s">
-        <div class="icon" style="--c:var(--violet)"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></svg></div>
-        <h3>Étalonnage</h3>
-        <p>Auditorium calibré Dolby Vision, pipeline ACES, sorties SDR / HDR10 / DCI-P3 depuis un seul grade.</p>
-        <ul><li>Resolve Studio</li><li>HDR 1000 nits</li><li>ACES</li></ul>
-      </article>
-      <article class="service glass" data-tilt data-reveal style="--d:.2s">
-        <div class="icon" style="--c:var(--pink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
-        <h3>VFX & Compositing</h3>
-        <p>Compositing Nuke, simulation Houdini, tracking et cleanup, rendus distribués sur la ferme GPU interne.</p>
-        <ul><li>Nuke</li><li>Houdini</li><li>Deadline</li></ul>
-      </article>
-      <article class="service glass" data-tilt data-reveal style="--d:.3s">
-        <div class="icon" style="--c:var(--lime)"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M3 12h2M7 8v8M11 4v16M15 7v10M19 10v4M21 12h0"/></svg></div>
-        <h3>Mixage & Sound design</h3>
-        <p>Studio Atmos 9.1.6, bruitage, doublage et livraison des stems conformes aux specs diffuseurs et plateformes.</p>
-        <ul><li>Pro Tools</li><li>Atmos 9.1.6</li><li>-23 LUFS</li></ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- PIPELINE -->
-  <section class="section container" id="pipeline">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow glass">Pipeline</span>
-      <h2>Du rush au master,<br><span class="gradient-text">sans friction.</span></h2>
-      <p>Un suivi en temps réel de chaque plan, chaque version, chaque validation client.</p>
-    </div>
-
-    <div class="pipeline glass" data-reveal id="pipe">
-      <div class="pipe-line"><i></i></div>
-      <div class="steps">
-        <div class="step"><div class="node" style="--d:.1s">01</div><h4>Ingest</h4><p>Checksum MD5, proxys, métadonnées</p></div>
-        <div class="step"><div class="node" style="--d:.5s">02</div><h4>Montage</h4><p>Offline, validations réalisateur</p></div>
-        <div class="step"><div class="node" style="--d:.9s">03</div><h4>Conform</h4><p>Relink RAW, EDL, contrôle</p></div>
-        <div class="step"><div class="node" style="--d:1.3s">04</div><h4>Grade & VFX</h4><p>Étalonnage, compositing, rendus</p></div>
-        <div class="step"><div class="node" style="--d:1.7s">05</div><h4>Mixage</h4><p>Atmos, stems, M&E</p></div>
-        <div class="step"><div class="node" style="--d:2.1s">06</div><h4>QC & Master</h4><p>IMF, DCP, ProRes 4444 XQ</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INFRA -->
-  <section class="section container" id="infra">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow glass">Infrastructure</span>
-      <h2>Une puissance <span class="gradient-text">qu'on voit couler.</span></h2>
-    </div>
-    <div class="showcase">
-      <div class="show-card glass" data-reveal>
-        <h3>Ferme de rendu GPU</h3>
-        <p>Charge moyenne des nœuds sur les dernières 24 h. Les jobs sont répartis automatiquement selon la priorité et la deadline.</p>
-        <div class="bars" id="bars"></div>
-      </div>
-      <div class="show-card glass" data-reveal style="--d:.15s">
-        <h3>Chiffres clés</h3>
-        <p>Dimensionné pour la série 4K HDR et le long-métrage.</p>
-        <div class="specs">
-          <div class="spec"><b data-count="64">0</b><small>GPU RTX 6000 Ada</small></div>
-          <div class="spec"><b data-count="100" data-suffix=" Gb/s">0</b><small>réseau fibre</small></div>
-          <div class="spec"><b data-count="6">0</b><small>salles d'étalonnage</small></div>
-          <div class="spec"><b data-count="24" data-suffix="/7">0</b><small>supervision</small></div>
+       <div class="PokeTemplate electrik">
+            <div class="PokeTitre">
+                <h1>Pikachu</h1><h1>80PV</h1>
+            </div>
+            <div class="PokePhoto">
+                <img class="TempPokePhoto" src="Design/images/background.jpg" alt="groudon">
+                <ol class="PokeDesc">
+                    <li>Fouet éléctrique</li>
+                    <br>
+                    <li>Queue de fer</li>
+                </ol>
+                <p class="blabla">Ses joues crépitent dès qu'il est excité. Mieux vaut ne pas le chatouiller un jour d'orage.</p>   
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="container" style="padding-bottom:60px">
-    <div class="cta glass" data-reveal>
-      <div class="orb"></div>
-      <h2>Suivez vos projets <span class="gradient-text">en direct.</span></h2>
-      <p>File de rendu, stockage, avancement des livrables : tout le laboratoire sur un seul écran.</p>
-      <a href="dashboard.html" class="btn btn-primary">Accéder au dashboard
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </section>
 
-  <footer class="container">
-    <div class="foot">
-      <span>© 2026 Prisme Lab — Laboratoire de post-production (site test)</span>
-      <span>Paris · Montage · Étalonnage · VFX · Son</span>
-    </div>
-  </footer>
+      <div class="PokeTemplate plante">
+            <div class="PokeTitre">
+                <h1>Bulbizarre</h1><h1>110PV</h1>
+            </div>
+            <div class="PokePhoto">
+                <img class="TempPokePhoto" src="Design/images/bulb.webp" alt="groudon">
+                <ol class="PokeDesc">
+                    <li>Fouet Épineux</li>
+                    <br>
+                    <li>Spore Sommeil</li>
+                </ol>
+                <p class="blabla">Il se camoufle dans la forêt et attend patiemment sa proie. Ses fleurs dégagent un parfum qui endort tout le monde.</p>   
+            </div>
+        </div>
 
-  <script src="js/main.js"></script>
+
+        <!-- TEMPLATE -->
+
+       <!-- <div class="PokeTemplate">
+            <div class="PokeTitre">
+                <h1>Template</h1><h1>..PV</h1>
+            </div>
+            <div class="PokePhoto">
+                <img class="TempPokePhoto" src="/Design/images/background.jpg" alt="groudon">
+                <ol class="PokeDesc">
+                    <li>Attaque numero 1</li>
+                    <br>
+                    <li>Attaque numero 2</li>
+                </ol>
+                <p class="blabla">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>   
+            </div>
+        </div> -->
+
+    </div>
 </body>
 </html>
