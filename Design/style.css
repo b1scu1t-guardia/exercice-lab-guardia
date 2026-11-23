@@ -254,3 +254,15 @@ body::before {
   0%        { transform: translateX(-150%) skewX(-20deg); }
   50%, 100% { transform: translateX(400%)  skewX(-20deg); }
 }
+
+#catFactBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcb05;
+  color: #2a4b8d;
+  font-weight: bold;
+  cursor: pointer;
+}
+#catFactBtn:disabled { opacity: 0.6; cursor: wait; }
+#catFactText { max-width: 500px; margin: 10px auto; }

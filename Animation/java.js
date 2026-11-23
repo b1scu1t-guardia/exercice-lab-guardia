@@ -74,3 +74,24 @@ overlay.addEventListener("click", closeCard);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeCard();
 });
+
+// ===== Cat Facts =====
+const catBtn = document.getElementById("catFactBtn");
+const catText = document.getElementById("catFactText");
+
+catBtn.addEventListener("click", async () => {
+  catBtn.disabled = true;
+  catText.textContent = "Chargement…";
+
+  try {
+    const res = await fetch("https://catfact.ninja/fact");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    catText.textContent = data.fact;
+  } catch (err) {
+    catText.textContent = "Impossible de récupérer un fait sur les chats 😿";
+    console.error(err);
+  } finally {
+    catBtn.disabled = false;
+  }
+});
