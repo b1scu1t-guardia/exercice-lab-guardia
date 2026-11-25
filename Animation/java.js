@@ -96,4 +96,4 @@ catBtn.addEventListener("click", async () => {
   }
 });
 
-console.log(" Mon pokémon préféré c'est amphynobi ")
+console.log(" Mon pokémon préféré c'est amphynobi ")  
