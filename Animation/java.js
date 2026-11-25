@@ -74,3 +74,5 @@ overlay.addEventListener("click", closeCard);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeCard();
 });
+
+console . log ( " Pokémon préféré est Pikachu " ) ;
