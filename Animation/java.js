@@ -76,3 +76,13 @@ document.addEventListener("keydown", (e) => {
 });
 
 console . log ( " Pokémon préféré est Pikachu " ) ;
+
+
+const utilisateurs = [
+  { nom: "Groudon"},
+  { nom: "Amphinobi"},
+  { nom: "Pikachu"},
+  { nom: "Bulbizarre"}
+];
+
+console.table(utilisateurs);
