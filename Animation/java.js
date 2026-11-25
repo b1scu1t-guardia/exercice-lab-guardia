@@ -95,3 +95,5 @@ catBtn.addEventListener("click", async () => {
     catBtn.disabled = false;
   }
 });
+
+console.log(" Mon pokémon préféré c'est amphynobi ")
