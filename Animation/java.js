@@ -124,7 +124,7 @@ pokebouton.addEventListener("click", () => {
 });
 
 
-pokebouton2.addEventListener("click", () => {
+pokebouton2.addEventListener("mouseover", () => {
   input.value = "";
   cards.forEach((card) => (card.style.display = ""));
 });
