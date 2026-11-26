@@ -97,3 +97,34 @@ catBtn.addEventListener("click", async () => {
 });
 
 console.log(" Mon pokémon préféré c'est amphynobi ")  
+
+const pokemons = [
+  { nom: "Draco" },
+  { nom: "Amphi" },
+  { nom: "Pikachu" },
+  { nom: "Bulbizard" },
+  { nom: "Groudon" },
+];
+
+console.log(pokemons[0].nom);
+console.log(pokemons[1].nom);
+console.log(pokemons[2].nom);
+console.log(pokemons[3].nom);
+console.log(pokemons[4].nom);
+
+const pokebouton = document.getElementById("pokeFactBtn");   
+const pokebouton2 = document.getElementById("pokeFactBtn2"); 
+
+// j'isole amphinobi
+pokebouton.addEventListener("click", () => {
+  cards.forEach((card) => {
+    const name = normalize(card.querySelector(".PokeTitre h1").textContent);
+    card.style.display = name.includes("amphinobi") ? "" : "none";
+  });
+});
+
+
+pokebouton2.addEventListener("click", () => {
+  input.value = "";
+  cards.forEach((card) => (card.style.display = ""));
+});

@@ -266,3 +266,27 @@ body::before {
 }
 #catFactBtn:disabled { opacity: 0.6; cursor: wait; }
 #catFactText { max-width: 500px; margin: 10px auto; }
+
+#pokeFactBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcb05;
+  color: #2a4b8d;
+  font-weight: bold;
+  cursor: pointer;
+}
+#pokeFactBtn:disabled { opacity: 0.6; cursor: wait; }
+#pokeFactText { max-width: 500px; margin: 10px auto; }
+
+#pokeFactBtn2 {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcb05;
+  color: #2a4b8d;
+  font-weight: bold;
+  cursor: pointer;
+}
+#pokeFactBtn2:disabled { opacity: 0.6; cursor: wait; }
+#pokeFactText { max-width: 500px; margin: 10px auto; }
